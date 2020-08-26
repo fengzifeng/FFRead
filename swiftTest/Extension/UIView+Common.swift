@@ -193,7 +193,9 @@ public extension UIView {
             self.origin = CGPoint(x: (superview.width / 2) - (self.width / 2),
                                   y: (superview.height / 2) - (self.height / 2))
         case .unknown:
-            return
+            break
+        default: break
+
         }
     }
     

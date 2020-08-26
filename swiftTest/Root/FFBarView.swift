@@ -75,8 +75,4 @@ class FFBarView: UIView {
         }
         selectIndex = button.tag - 1
     }
-    
-    
-    
-
 }

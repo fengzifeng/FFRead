@@ -30,7 +30,6 @@ class BaseViewController: UIViewController {
         shadow.shadowColor = UIColor.clear
         let shadowImage = UIImage.imageWithColor(color: HexColor(value: 0xececec), size: CGSize.init(width: ScreenWidth, height: 0.5))
         navigationBar.shadowImage = shadowImage
-//        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:RGB(r: 50, g: 55, b: 78),NSAttributedString.Key.shadow:shadow,NSAttributedString.Key.font:18]
         navigationBar.pushItem(self.myNavigationItem, animated: false)
         return navigationBar
     }()
@@ -49,7 +48,6 @@ class BaseViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    
     required init?(coder aDecoder: NSCoder) {
         _myTitle = ""
         super.init(coder: aDecoder)
@@ -58,11 +56,6 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view.addSubview(self.navigationBar)
     }
-    
-
-
-
 }

@@ -31,5 +31,4 @@ class FFDiscoverViewController: BaseViewController {
         let vc = TestViewController.init()
         rootNav.pushViewController(vc, animated: true)
     }
-
 }

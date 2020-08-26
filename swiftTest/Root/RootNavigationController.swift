@@ -14,7 +14,6 @@ class RootNavigationController: UINavigationController {
         super.viewDidLoad()
         self.navigationBar.isHidden = true
     }
-
 }
 
 extension RootNavigationController : UINavigationControllerDelegate, UIGestureRecognizerDelegate {

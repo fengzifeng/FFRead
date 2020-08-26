@@ -15,8 +15,6 @@ class RootViewController: BaseViewController, FFBarViewDelegate {
     var currentViewController : BaseViewController?
     var navArray = [FFMainViewController.init(), FFDiscoverViewController.init(), FFMeViewController.init()]
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.purple
@@ -39,36 +37,7 @@ class RootViewController: BaseViewController, FFBarViewDelegate {
         self.addChild(currentViewController!)
         self.view.insertSubview(currentViewController!.view, belowSubview: navigationBar)
     }
-    
-    private lazy var tableView :UITableView = {
-        let tabView = UITableView.init(frame: self.view.frame, style: UITableView.Style.plain)
-        tabView.delegate = self
-        tabView.dataSource = self
-        tabView.register(UITableViewCell.self, forCellReuseIdentifier: "CellIdentifier")
-        return tabView
-        
-    }()
 }
 
-extension RootViewController : UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titleArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
-        cell.textLabel?.text = titleArray[indexPath.row]
-        return cell
-    }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        switch indexPath.row {
-//        case 0:
-//            self.present(YYProvider.customBouncesStyle(), animated: true, completion: nil)
-//        default:
-//            self.present(YYProvider.tabbarWithNavigationStyle(), animated: true, completion: nil)
-//        }
-//    }
-}
 
 

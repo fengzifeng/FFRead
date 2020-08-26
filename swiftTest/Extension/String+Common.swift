@@ -9,6 +9,7 @@
 import UIKit
 
 extension String {
+    
     func stringWidthWith(font: UIFont, height: CGFloat) -> CGFloat {
         if self.count == 0  {
             return 0
@@ -22,7 +23,6 @@ extension String {
         
         return size.width;
     }
-    
     
     func stringHeightWith(font: UIFont, width: CGFloat) -> CGFloat {
         if self.count == 0  {

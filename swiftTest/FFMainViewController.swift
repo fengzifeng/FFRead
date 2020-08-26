@@ -32,5 +32,4 @@ class FFMainViewController: BaseViewController {
         let vc = TestViewController.init()
         rootNav.pushViewController(vc, animated: true)
     }
-    
 }

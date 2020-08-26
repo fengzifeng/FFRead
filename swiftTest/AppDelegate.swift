@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
 
     var window: UIWindow?
     var nav : RootNavigationController!
@@ -22,6 +22,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = nav;
         self.window?.makeKeyAndVisible();
 
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if url.isFileURL {
+            var strPath: String = url.path
+            if strPath.hasPrefix("/private") {
+                strPath = String(strPath.prefix("/private".count))
+            }
+            let range: Range = strPath.range(of: "Inbox/")!
+
+            if range.lowerBound != range.upperBound {
+                let rePath = strPath.replacingOccurrences(of: "Inbox/", with: "")
+                
+                if FileManager.default.fileExists(atPath: rePath) {
+                    //
+                    let tip = "file is exist,rename the file?"
+                    let aler: UIAlertView = UIAlertView.init(title: "", message: tip, delegate: self, cancelButtonTitle: "OK")
+                    aler.tag = 100
+                    aler.show()
+                    
+                } else {
+                    let tip = "file is moved successfully, open the file?"
+                    let aler: UIAlertView = UIAlertView.init(title: "", message: tip, delegate: self as! UIAlertViewDelegate, cancelButtonTitle: "Cancel", otherButtonTitles: "OK")
+                    aler.tag = 101
+                    aler.show()
+                }
+                
+            }
+            
+        }
+        
         return true
     }
 
@@ -45,6 +78,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
+        
     }
 
 

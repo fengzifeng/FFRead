@@ -9,7 +9,7 @@
 import UIKit
 
 class FFVerticalButton: UIButton {
-
+    
     open var _space: CGFloat
     var space : CGFloat {
         set {
@@ -20,7 +20,6 @@ class FFVerticalButton: UIButton {
             return _space
         }
     }
-    
     
     override init(frame: CGRect) {
         _space = 5
@@ -53,7 +52,6 @@ class FFVerticalButton: UIButton {
             self.adjustButton(highlighted: self.isHighlighted)
         }
     }
-    
     
     func adjustButton(highlighted: Bool) {
         var text: String?
@@ -88,6 +86,4 @@ class FFVerticalButton: UIButton {
         self.imageEdgeInsets = UIEdgeInsets.init(top: top, left: (btnWidth / 2.0 - imgCenterX), bottom: 0, right: 0)
         self.titleEdgeInsets = UIEdgeInsets.init(top: imgHeight + self.space + top, left: (btnWidth / 2 - textCenterX), bottom: 0, right: 0)
     }
-    
-
 }

@@ -18,6 +18,5 @@ extension UIButton {
         button.addTarget(target, action: action, for: UIControl.Event.touchUpInside)
         
         return button
-        
     }
 }

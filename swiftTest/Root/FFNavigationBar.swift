@@ -19,11 +19,7 @@ class FFNavigationBar: UINavigationBar {
                     view.frame = self.bounds
                 } else if NSStringFromClass(type(of: view)).contains("ContentView") {
                     var frame = view.frame
-                    frame.origin.y = 20
-                    
-                    if IsIphonex {
-                        frame.origin.y = 44
-                    }
+                    frame.origin.y = UIApplication.shared.statusBarFrame.size.height
                     frame.size.height = self.bounds.size.height - frame.origin.y
                     view.frame = frame
                 }

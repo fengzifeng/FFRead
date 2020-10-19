@@ -15,8 +15,6 @@ class FFReadChapterModel: NSObject {
     var bookNum :NSNumber!
 
     var bookName :String!
-    
-    var <#name#> = <#value#>
-    
+        
 
 }

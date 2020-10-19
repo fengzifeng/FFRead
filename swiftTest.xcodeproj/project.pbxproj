@@ -18,6 +18,12 @@
 		B233CF67236C3DD40079FC35 /* FFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233CF66236C3DD40079FC35 /* FFMainViewController.swift */; };
 		B233CF69236C3E0E0079FC35 /* FFDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233CF68236C3E0E0079FC35 /* FFDiscoverViewController.swift */; };
 		B233CF6B236C3E280079FC35 /* FFMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233CF6A236C3E280079FC35 /* FFMeViewController.swift */; };
+		B23D7224251C9B8300DE6966 /* FFtextChapterParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */; };
+		B23D7226251CA20E00DE6966 /* FFReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7225251CA20E00DE6966 /* FFReadModel.swift */; };
+		B23D7228251DE7E500DE6966 /* FFReadChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */; };
+		B23F59F72510BEA500639408 /* TurnPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59F62510BEA500639408 /* TurnPage.swift */; };
+		B23F59FB25120D7F00639408 /* FFTurnPageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59FA25120D7F00639408 /* FFTurnPageLabel.swift */; };
+		B23F59FD25120E3300639408 /* FFReadPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59FC25120E3300639408 /* FFReadPageModel.swift */; };
 		B23FD2192368228100BE5AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FD2182368228100BE5AC9 /* AppDelegate.swift */; };
 		B23FD21B2368228100BE5AC9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FD21A2368228100BE5AC9 /* RootViewController.swift */; };
 		B23FD21E2368228100BE5AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23FD21C2368228100BE5AC9 /* Main.storyboard */; };
@@ -60,6 +66,12 @@
 		B233CF66236C3DD40079FC35 /* FFMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFMainViewController.swift; sourceTree = "<group>"; };
 		B233CF68236C3E0E0079FC35 /* FFDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFDiscoverViewController.swift; sourceTree = "<group>"; };
 		B233CF6A236C3E280079FC35 /* FFMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFMeViewController.swift; sourceTree = "<group>"; };
+		B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFtextChapterParser.swift; sourceTree = "<group>"; };
+		B23D7225251CA20E00DE6966 /* FFReadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadModel.swift; sourceTree = "<group>"; };
+		B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadChapterModel.swift; sourceTree = "<group>"; };
+		B23F59F62510BEA500639408 /* TurnPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnPage.swift; sourceTree = "<group>"; };
+		B23F59FA25120D7F00639408 /* FFTurnPageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTurnPageLabel.swift; sourceTree = "<group>"; };
+		B23F59FC25120E3300639408 /* FFReadPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadPageModel.swift; sourceTree = "<group>"; };
 		B23FD2152368228100BE5AC9 /* swiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23FD2182368228100BE5AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B23FD21A2368228100BE5AC9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +116,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B23F59F52510BE5300639408 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+				B23F59F62510BEA500639408 /* TurnPage.swift */,
+				B23F59FA25120D7F00639408 /* FFTurnPageLabel.swift */,
+				B23F59FC25120E3300639408 /* FFReadPageModel.swift */,
+				B23D7225251CA20E00DE6966 /* FFReadModel.swift */,
+				B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */,
+				B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */,
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
 		B23FD20C2368228100BE5AC9 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +154,7 @@
 			children = (
 				B23FD2182368228100BE5AC9 /* AppDelegate.swift */,
 				B2BC69BD236FCB0200C416C2 /* Root */,
+				B23F59F52510BE5300639408 /* Read */,
 				B2BC69BC236FCAAB00C416C2 /* Extension */,
 				B233CF66236C3DD40079FC35 /* FFMainViewController.swift */,
 				B233CF68236C3E0E0079FC35 /* FFDiscoverViewController.swift */,
@@ -317,23 +343,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B23F59FB25120D7F00639408 /* FFTurnPageLabel.swift in Sources */,
 				B22E4327236939BB00FB1835 /* FFVerticalButton.swift in Sources */,
 				B2641C59236AE775000DEC89 /* UIView+Common.swift in Sources */,
+				B23D7224251C9B8300DE6966 /* FFtextChapterParser.swift in Sources */,
 				B23FD21B2368228100BE5AC9 /* RootViewController.swift in Sources */,
 				B233CF69236C3E0E0079FC35 /* FFDiscoverViewController.swift in Sources */,
 				B233CF65236C2E580079FC35 /* UIImage+Common.swift in Sources */,
 				B233CF5D236C1DE40079FC35 /* RootNavigationController.swift in Sources */,
 				B233CF6B236C3E280079FC35 /* FFMeViewController.swift in Sources */,
+				B23D7226251CA20E00DE6966 /* FFReadModel.swift in Sources */,
 				B233CF67236C3DD40079FC35 /* FFMainViewController.swift in Sources */,
 				B233CF5F236C1F920079FC35 /* BaseViewController.swift in Sources */,
+				B23F59FD25120E3300639408 /* FFReadPageModel.swift in Sources */,
 				B2BC69BF236FCB5100C416C2 /* TestViewController.swift in Sources */,
 				B2641C57236AD8DC000DEC89 /* FFConst.swift in Sources */,
 				B23FD2192368228100BE5AC9 /* AppDelegate.swift in Sources */,
 				B22E432D23697D2500FB1835 /* String+Common.swift in Sources */,
+				B23F59F72510BEA500639408 /* TurnPage.swift in Sources */,
 				B22E43252369393700FB1835 /* FFBarView.swift in Sources */,
 				B233CF61236C25700079FC35 /* UIViewController+Navigation.swift in Sources */,
 				B2BC69BB236FBA2A00C416C2 /* UIButton+Common.swift in Sources */,
 				B233CF63236C268A0079FC35 /* FFNavigationBar.swift in Sources */,
+				B23D7228251DE7E500DE6966 /* FFReadChapterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

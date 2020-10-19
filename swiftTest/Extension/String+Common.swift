@@ -37,4 +37,15 @@ extension String {
         
         return size.height;
     }
+    
+    /// 正则替换字符
+    func replacingCharacters(_ pattern:String, _ template:String) ->String {
+        
+        do {
+            let regularExpression = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
+            
+            return regularExpression.stringByReplacingMatches(in: self, options: NSRegularExpression.MatchingOptions.reportProgress, range: NSMakeRange(0, self.count), withTemplate: template)
+            
+        } catch {return self}
+    }
 }

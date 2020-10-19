@@ -27,7 +27,7 @@ class FFtextChapterParser: NSObject {
             return chapterListArray
         }
         
-        
+        return chapterListArray
     }
     
     class func fliterString(content:String) -> String {

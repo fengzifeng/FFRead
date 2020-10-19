@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:swiftTest.xcodeproj">
+      location = "self:/Users/feng/SwiftProject/FFRead.xcodeproj">
    </FileRef>
 </Workspace>

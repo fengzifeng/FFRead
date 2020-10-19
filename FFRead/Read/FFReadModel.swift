@@ -14,5 +14,4 @@ class FFReadModel: NSObject {
     
     var bookName :String!
     
-    var bookId :String!
 }

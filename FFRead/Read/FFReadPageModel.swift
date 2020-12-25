@@ -7,7 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 class FFReadPageModel: NSObject {
+    var range:NSRange!
+    var content:String!
+    var pageIndex:Int!
+    var chapterIndex:Int!
+    var width:CGFloat!
+    var height:CGFloat!
+    var frame:CTFrame!
+
     
 }

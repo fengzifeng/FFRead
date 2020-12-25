@@ -43,12 +43,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
                     let aler: UIAlertView = UIAlertView.init(title: "", message: tip, delegate: self, cancelButtonTitle: "OK")
                     aler.tag = 100
                     aler.show()
-                    
+                    FFReadInfo.share.localRelevantFile.setObject(strPath, forKey: NSNumber.init(value: aler.tag))
+
                 } else {
                     let tip = "file is moved successfully, open the file?"
                     let aler: UIAlertView = UIAlertView.init(title: "", message: tip, delegate: self as! UIAlertViewDelegate, cancelButtonTitle: "Cancel", otherButtonTitles: "OK")
                     aler.tag = 101
                     aler.show()
+                    
+                    FFReadInfo.share.localRelevantFile.setObject(strPath, forKey: NSNumber.init(value: aler.tag))
+
                 }
                 
             }
@@ -81,9 +85,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
     }
     
     func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
+        if alertView.tag == 101 {
+            if buttonIndex == 1 {
+                self.localFileMove(num: NSNumber.init(value: alertView.tag))
+
+            } else {
+                FFReadInfo.share.localRelevantFile.removeObject(forKey: NSNumber.init(value: alertView.tag))
+            }
+            
+        } else if alertView.tag == 100 {
+            if buttonIndex == 1 {
+                
+            } else {
+                self.localFileMove(num: NSNumber.init(value: alertView.tag))
+            }
+        }
+    }
+    
+    
+    func localFileMove(num: NSNumber) {
+        if FFReadInfo.share.localRelevantFile.allKeys.count > 0 {
+            var strPath: String = FFReadInfo.share.localRelevantFile.object(forKey: num) as! String
+            if strPath.hasPrefix("/private") {
+                strPath = String(strPath.prefix("/private".count))
+            }
+            let range: Range = strPath.range(of: "Inbox/")!
+            
+            if range.lowerBound != range.upperBound {
+                let rePath = strPath.replacingOccurrences(of: "Inbox/", with: "")
+                do {
+                    try FileManager.default.moveItem(atPath: strPath, toPath: rePath)
+                    self.openLocalRelevant(path: rePath)
+                } catch {}
+
+            }
+        }
+        
+        FFReadInfo.share.localRelevantFile.removeObject(forKey: num)
         
     }
-
-
+    
+    func openLocalRelevant(path: String){
+        FFtextChapterParser.parser(path: path) { (readChapterList) in
+            let vc = FFTurnPageViewController()
+            vc.readChapterList = readChapterList
+            rootNav.pushViewController(vc, animated: true)
+        }
+    }
 }
 

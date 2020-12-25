@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B207EE58255250AC005D4EF8 /* FFReadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE57255250AC005D4EF8 /* FFReadInfo.swift */; };
+		B207EE6525555150005D4EF8 /* FFTurnPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */; };
+		B207EE6A25555823005D4EF8 /* FFReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE6925555823005D4EF8 /* FFReadViewController.swift */; };
+		B21E4265256E573B008D5249 /* FFCoreTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E4264256E573B008D5249 /* FFCoreTextParser.swift */; };
+		B21E427A2570D914008D5249 /* FFTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E42792570D913008D5249 /* FFTextStyle.swift */; };
+		B227E77925889CE300C758A2 /* String+core.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E77825889CE300C758A2 /* String+core.swift */; };
+		B227E77E258A0AE600C758A2 /* FFReadConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E77D258A0AE400C758A2 /* FFReadConfig.swift */; };
+		B227E783258A1B2500C758A2 /* FFReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E782258A1B2400C758A2 /* FFReadCell.swift */; };
+		B227E788258A1C0C00C758A2 /* FFReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E787258A1C0C00C758A2 /* FFReadView.swift */; };
 		B22E43252369393700FB1835 /* FFBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E43242369393700FB1835 /* FFBarView.swift */; };
 		B22E4327236939BB00FB1835 /* FFVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E4326236939BB00FB1835 /* FFVerticalButton.swift */; };
 		B22E432D23697D2500FB1835 /* String+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22E432C23697D2500FB1835 /* String+Common.swift */; };
@@ -19,10 +28,9 @@
 		B233CF69236C3E0E0079FC35 /* FFDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233CF68236C3E0E0079FC35 /* FFDiscoverViewController.swift */; };
 		B233CF6B236C3E280079FC35 /* FFMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233CF6A236C3E280079FC35 /* FFMeViewController.swift */; };
 		B23D7224251C9B8300DE6966 /* FFtextChapterParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */; };
-		B23D7226251CA20E00DE6966 /* FFReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7225251CA20E00DE6966 /* FFReadModel.swift */; };
+		B23D7226251CA20E00DE6966 /* FFReadItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7225251CA20E00DE6966 /* FFReadItemModel.swift */; };
 		B23D7228251DE7E500DE6966 /* FFReadChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */; };
-		B23F59F72510BEA500639408 /* TurnPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59F62510BEA500639408 /* TurnPage.swift */; };
-		B23F59FB25120D7F00639408 /* FFTurnPageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59FA25120D7F00639408 /* FFTurnPageLabel.swift */; };
+		B23F59F72510BEA500639408 /* FFTurnPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59F62510BEA500639408 /* FFTurnPageView.swift */; };
 		B23F59FD25120E3300639408 /* FFReadPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59FC25120E3300639408 /* FFReadPageModel.swift */; };
 		B23FD2192368228100BE5AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FD2182368228100BE5AC9 /* AppDelegate.swift */; };
 		B23FD21B2368228100BE5AC9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FD21A2368228100BE5AC9 /* RootViewController.swift */; };
@@ -35,6 +43,7 @@
 		B2641C59236AE775000DEC89 /* UIView+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2641C58236AE775000DEC89 /* UIView+Common.swift */; };
 		B2BC69BB236FBA2A00C416C2 /* UIButton+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC69BA236FBA2A00C416C2 /* UIButton+Common.swift */; };
 		B2BC69BF236FCB5100C416C2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC69BE236FCB5100C416C2 /* TestViewController.swift */; };
+		B2D921CC2595F3C300DF4A9A /* 大道朝天.txt in Resources */ = {isa = PBXBuildFile; fileRef = B2D921CB2595F3C300DF4A9A /* 大道朝天.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B207EE57255250AC005D4EF8 /* FFReadInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadInfo.swift; sourceTree = "<group>"; };
+		B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTurnPageViewController.swift; sourceTree = "<group>"; };
+		B207EE6925555823005D4EF8 /* FFReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadViewController.swift; sourceTree = "<group>"; };
+		B21E4264256E573B008D5249 /* FFCoreTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFCoreTextParser.swift; sourceTree = "<group>"; };
+		B21E42792570D913008D5249 /* FFTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTextStyle.swift; sourceTree = "<group>"; };
+		B227E77825889CE300C758A2 /* String+core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+core.swift"; sourceTree = "<group>"; };
+		B227E77D258A0AE400C758A2 /* FFReadConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadConfig.swift; sourceTree = "<group>"; };
+		B227E782258A1B2400C758A2 /* FFReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadCell.swift; sourceTree = "<group>"; };
+		B227E787258A1C0C00C758A2 /* FFReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadView.swift; sourceTree = "<group>"; };
 		B22E43242369393700FB1835 /* FFBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFBarView.swift; sourceTree = "<group>"; };
 		B22E4326236939BB00FB1835 /* FFVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFVerticalButton.swift; sourceTree = "<group>"; };
 		B22E432C23697D2500FB1835 /* String+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Common.swift"; sourceTree = "<group>"; };
@@ -67,10 +85,9 @@
 		B233CF68236C3E0E0079FC35 /* FFDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFDiscoverViewController.swift; sourceTree = "<group>"; };
 		B233CF6A236C3E280079FC35 /* FFMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFMeViewController.swift; sourceTree = "<group>"; };
 		B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFtextChapterParser.swift; sourceTree = "<group>"; };
-		B23D7225251CA20E00DE6966 /* FFReadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadModel.swift; sourceTree = "<group>"; };
+		B23D7225251CA20E00DE6966 /* FFReadItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadItemModel.swift; sourceTree = "<group>"; };
 		B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadChapterModel.swift; sourceTree = "<group>"; };
-		B23F59F62510BEA500639408 /* TurnPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnPage.swift; sourceTree = "<group>"; };
-		B23F59FA25120D7F00639408 /* FFTurnPageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTurnPageLabel.swift; sourceTree = "<group>"; };
+		B23F59F62510BEA500639408 /* FFTurnPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTurnPageView.swift; sourceTree = "<group>"; };
 		B23F59FC25120E3300639408 /* FFReadPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadPageModel.swift; sourceTree = "<group>"; };
 		B23FD2152368228100BE5AC9 /* FFRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23FD2182368228100BE5AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +106,7 @@
 		B2641C58236AE775000DEC89 /* UIView+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Common.swift"; sourceTree = "<group>"; };
 		B2BC69BA236FBA2A00C416C2 /* UIButton+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Common.swift"; sourceTree = "<group>"; };
 		B2BC69BE236FCB5100C416C2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		B2D921CB2595F3C300DF4A9A /* 大道朝天.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "大道朝天.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +137,20 @@
 		B23F59F52510BE5300639408 /* Read */ = {
 			isa = PBXGroup;
 			children = (
-				B23F59F62510BEA500639408 /* TurnPage.swift */,
-				B23F59FA25120D7F00639408 /* FFTurnPageLabel.swift */,
+				B23F59F62510BEA500639408 /* FFTurnPageView.swift */,
+				B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */,
+				B207EE6925555823005D4EF8 /* FFReadViewController.swift */,
+				B21E4264256E573B008D5249 /* FFCoreTextParser.swift */,
+				B21E42792570D913008D5249 /* FFTextStyle.swift */,
+				B227E77D258A0AE400C758A2 /* FFReadConfig.swift */,
+				B227E77825889CE300C758A2 /* String+core.swift */,
 				B23F59FC25120E3300639408 /* FFReadPageModel.swift */,
-				B23D7225251CA20E00DE6966 /* FFReadModel.swift */,
+				B23D7225251CA20E00DE6966 /* FFReadItemModel.swift */,
 				B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */,
 				B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */,
+				B207EE57255250AC005D4EF8 /* FFReadInfo.swift */,
+				B227E782258A1B2400C758A2 /* FFReadCell.swift */,
+				B227E787258A1C0C00C758A2 /* FFReadView.swift */,
 			);
 			path = Read;
 			sourceTree = "<group>";
@@ -153,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				B23FD2182368228100BE5AC9 /* AppDelegate.swift */,
+				B2D921CB2595F3C300DF4A9A /* 大道朝天.txt */,
 				B2BC69BD236FCB0200C416C2 /* Root */,
 				B23F59F52510BE5300639408 /* Read */,
 				B2BC69BC236FCAAB00C416C2 /* Extension */,
@@ -318,6 +345,7 @@
 			files = (
 				B23FD2232368228600BE5AC9 /* LaunchScreen.storyboard in Resources */,
 				B23FD2202368228600BE5AC9 /* Assets.xcassets in Resources */,
+				B2D921CC2595F3C300DF4A9A /* 大道朝天.txt in Resources */,
 				B23FD21E2368228100BE5AC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +371,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23F59FB25120D7F00639408 /* FFTurnPageLabel.swift in Sources */,
 				B22E4327236939BB00FB1835 /* FFVerticalButton.swift in Sources */,
 				B2641C59236AE775000DEC89 /* UIView+Common.swift in Sources */,
 				B23D7224251C9B8300DE6966 /* FFtextChapterParser.swift in Sources */,
@@ -352,18 +379,27 @@
 				B233CF65236C2E580079FC35 /* UIImage+Common.swift in Sources */,
 				B233CF5D236C1DE40079FC35 /* RootNavigationController.swift in Sources */,
 				B233CF6B236C3E280079FC35 /* FFMeViewController.swift in Sources */,
-				B23D7226251CA20E00DE6966 /* FFReadModel.swift in Sources */,
+				B23D7226251CA20E00DE6966 /* FFReadItemModel.swift in Sources */,
 				B233CF67236C3DD40079FC35 /* FFMainViewController.swift in Sources */,
 				B233CF5F236C1F920079FC35 /* BaseViewController.swift in Sources */,
+				B227E783258A1B2500C758A2 /* FFReadCell.swift in Sources */,
+				B227E77925889CE300C758A2 /* String+core.swift in Sources */,
+				B227E788258A1C0C00C758A2 /* FFReadView.swift in Sources */,
 				B23F59FD25120E3300639408 /* FFReadPageModel.swift in Sources */,
 				B2BC69BF236FCB5100C416C2 /* TestViewController.swift in Sources */,
 				B2641C57236AD8DC000DEC89 /* FFConst.swift in Sources */,
+				B207EE58255250AC005D4EF8 /* FFReadInfo.swift in Sources */,
+				B207EE6525555150005D4EF8 /* FFTurnPageViewController.swift in Sources */,
 				B23FD2192368228100BE5AC9 /* AppDelegate.swift in Sources */,
 				B22E432D23697D2500FB1835 /* String+Common.swift in Sources */,
-				B23F59F72510BEA500639408 /* TurnPage.swift in Sources */,
+				B23F59F72510BEA500639408 /* FFTurnPageView.swift in Sources */,
+				B227E77E258A0AE600C758A2 /* FFReadConfig.swift in Sources */,
 				B22E43252369393700FB1835 /* FFBarView.swift in Sources */,
 				B233CF61236C25700079FC35 /* UIViewController+Navigation.swift in Sources */,
+				B21E427A2570D914008D5249 /* FFTextStyle.swift in Sources */,
+				B207EE6A25555823005D4EF8 /* FFReadViewController.swift in Sources */,
 				B2BC69BB236FBA2A00C416C2 /* UIButton+Common.swift in Sources */,
+				B21E4265256E573B008D5249 /* FFCoreTextParser.swift in Sources */,
 				B233CF63236C268A0079FC35 /* FFNavigationBar.swift in Sources */,
 				B23D7228251DE7E500DE6966 /* FFReadChapterModel.swift in Sources */,
 			);

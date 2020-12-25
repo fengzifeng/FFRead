@@ -18,7 +18,7 @@ class FFMainViewController: BaseViewController {
         let button = UIButton.init(frame: CGRect.init(x: 100, y: 100, width: 60, height: 60))
         button.addTarget(self, action: #selector(click), for: UIControl.Event.touchUpInside)
         self.view.addSubview(button)
-        button.setTitle("跳转", for: UIControl.State.normal)
+        button.setTitle("阅读", for: UIControl.State.normal)
         button.setTitleColor(UIColor.red, for: UIControl.State.normal)
     }
     
@@ -29,7 +29,12 @@ class FFMainViewController: BaseViewController {
     }
     
     @objc func click() {
-        let vc = TestViewController.init()
-        rootNav.pushViewController(vc, animated: true)
+        let path = Bundle.main.path(forResource: "大道朝天", ofType: "txt")
+        
+        FFtextChapterParser.parser(path: path) { (readChapterList) in
+            let vc = FFTurnPageViewController()
+            vc.readChapterList = readChapterList
+            rootNav.pushViewController(vc, animated: true)
+        }
     }
 }

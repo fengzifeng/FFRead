@@ -16,5 +16,15 @@ class FFReadChapterModel: NSObject {
 
     var bookName :String!
         
+    var num :NSNumber!
+    
+    var isPreface :Bool!
+
+    var name :String!
+
+    var content :String!
+    
+    var chapterId :String!
+
 
 }

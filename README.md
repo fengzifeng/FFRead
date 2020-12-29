@@ -1,2 +1,2 @@
 # FFRead
-Swift练习，框架，read软件，翻页
+Swift，框架，read阅读，仿真翻页

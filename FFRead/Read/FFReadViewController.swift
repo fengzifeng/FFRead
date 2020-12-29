@@ -2,38 +2,36 @@
 //  FFReadViewController.swift
 //  FFRead
 //
-//  Created by feng on 2020/11/6.
+//  Created by feng on 2020/12/25.
 //  Copyright © 2020 feng. All rights reserved.
 //
 
 import UIKit
 
-class FFReadViewController: UIViewController {
+class FFReadViewController: BaseViewController {
     
-    var _pageModel:FFReadPageModel!
-    var pageModel:FFReadPageModel! {
-        set {
-            _pageModel = newValue
-            readView.pageModel = pageModel
-            readView.frame = CGRect.init(x: 20, y: StateBarH, width: ScreenWidth - 40, height: pageModel.height)
-            readView.setNeedsDisplay()
-        }
-        get {
-            return _pageModel
-        }
-    }
+    var readChapterList :[FFReadChapterModel]!
     
-    var readView:FFReadView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = UIColor.white
-    }
-    
-    func setupViews() {
-        readView = FFReadView()
-        view.addSubview(readView)
-    }
+    var bookName :String?
     
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        navigationBar.isHidden = true
+        setNavigationBackButtonDefault()
+        let vc = FFTurnPageViewController()
+        myTitle = bookName ?? ""
+        view.backgroundColor = UIColor .white
+        vc.readChapterList = readChapterList
+        addChild(vc)
+        view.insertSubview(vc.view, belowSubview: navigationBar)
+        
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(clickTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func clickTap() {
+        navigationBar.isHidden = !navigationBar.isHidden
+    }
 }

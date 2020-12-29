@@ -32,7 +32,8 @@ class FFMainViewController: BaseViewController {
         let path = Bundle.main.path(forResource: "大道朝天", ofType: "txt")
         
         FFtextChapterParser.parser(path: path) { (readChapterList) in
-            let vc = FFTurnPageViewController()
+            let vc = FFReadViewController()
+            vc.bookName = "大道朝天"
             vc.readChapterList = readChapterList
             rootNav.pushViewController(vc, animated: true)
         }

@@ -19,11 +19,14 @@ class FFReadItemModel: NSObject {
     var chapterId :String!
     
     var currentPage :Int!
+    var chapterIndex: Int!
+    var cacheIndex: Int!
     
     override init() {
         super.init()
         currentPage = 0
-    }
+        chapterIndex = 0
+        cacheIndex = 0    }
     
     
 }

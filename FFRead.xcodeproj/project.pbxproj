@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B207EE58255250AC005D4EF8 /* FFReadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE57255250AC005D4EF8 /* FFReadInfo.swift */; };
 		B207EE6525555150005D4EF8 /* FFTurnPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */; };
-		B207EE6A25555823005D4EF8 /* FFReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE6925555823005D4EF8 /* FFReadViewController.swift */; };
+		B207EE6A25555823005D4EF8 /* FFReadViewPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE6925555823005D4EF8 /* FFReadViewPageController.swift */; };
 		B21E4265256E573B008D5249 /* FFCoreTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E4264256E573B008D5249 /* FFCoreTextParser.swift */; };
 		B21E427A2570D914008D5249 /* FFTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21E42792570D913008D5249 /* FFTextStyle.swift */; };
 		B227E77925889CE300C758A2 /* String+core.swift in Sources */ = {isa = PBXBuildFile; fileRef = B227E77825889CE300C758A2 /* String+core.swift */; };
@@ -44,6 +44,9 @@
 		B2BC69BB236FBA2A00C416C2 /* UIButton+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC69BA236FBA2A00C416C2 /* UIButton+Common.swift */; };
 		B2BC69BF236FCB5100C416C2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BC69BE236FCB5100C416C2 /* TestViewController.swift */; };
 		B2D921CC2595F3C300DF4A9A /* 大道朝天.txt in Resources */ = {isa = PBXBuildFile; fileRef = B2D921CB2595F3C300DF4A9A /* 大道朝天.txt */; };
+		B2D921D42595F7A300DF4A9A /* FFReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D921D32595F7A300DF4A9A /* FFReadViewController.swift */; };
+		B2D9221E259B195A00DF4A9A /* FFReadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D9221D259B195900DF4A9A /* FFReadModel.swift */; };
+		B2D92223259B33F700DF4A9A /* FFReversePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D92222259B33F700DF4A9A /* FFReversePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +69,7 @@
 /* Begin PBXFileReference section */
 		B207EE57255250AC005D4EF8 /* FFReadInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadInfo.swift; sourceTree = "<group>"; };
 		B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTurnPageViewController.swift; sourceTree = "<group>"; };
-		B207EE6925555823005D4EF8 /* FFReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadViewController.swift; sourceTree = "<group>"; };
+		B207EE6925555823005D4EF8 /* FFReadViewPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadViewPageController.swift; sourceTree = "<group>"; };
 		B21E4264256E573B008D5249 /* FFCoreTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFCoreTextParser.swift; sourceTree = "<group>"; };
 		B21E42792570D913008D5249 /* FFTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTextStyle.swift; sourceTree = "<group>"; };
 		B227E77825889CE300C758A2 /* String+core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+core.swift"; sourceTree = "<group>"; };
@@ -107,6 +110,9 @@
 		B2BC69BA236FBA2A00C416C2 /* UIButton+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Common.swift"; sourceTree = "<group>"; };
 		B2BC69BE236FCB5100C416C2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B2D921CB2595F3C300DF4A9A /* 大道朝天.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "大道朝天.txt"; sourceTree = "<group>"; };
+		B2D921D32595F7A300DF4A9A /* FFReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadViewController.swift; sourceTree = "<group>"; };
+		B2D9221D259B195900DF4A9A /* FFReadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadModel.swift; sourceTree = "<group>"; };
+		B2D92222259B33F700DF4A9A /* FFReversePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReversePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,13 +145,16 @@
 			children = (
 				B23F59F62510BEA500639408 /* FFTurnPageView.swift */,
 				B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */,
-				B207EE6925555823005D4EF8 /* FFReadViewController.swift */,
+				B2D921D32595F7A300DF4A9A /* FFReadViewController.swift */,
+				B207EE6925555823005D4EF8 /* FFReadViewPageController.swift */,
+				B2D92222259B33F700DF4A9A /* FFReversePageViewController.swift */,
 				B21E4264256E573B008D5249 /* FFCoreTextParser.swift */,
 				B21E42792570D913008D5249 /* FFTextStyle.swift */,
 				B227E77D258A0AE400C758A2 /* FFReadConfig.swift */,
 				B227E77825889CE300C758A2 /* String+core.swift */,
 				B23F59FC25120E3300639408 /* FFReadPageModel.swift */,
 				B23D7225251CA20E00DE6966 /* FFReadItemModel.swift */,
+				B2D9221D259B195900DF4A9A /* FFReadModel.swift */,
 				B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */,
 				B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */,
 				B207EE57255250AC005D4EF8 /* FFReadInfo.swift */,
@@ -381,6 +390,7 @@
 				B233CF6B236C3E280079FC35 /* FFMeViewController.swift in Sources */,
 				B23D7226251CA20E00DE6966 /* FFReadItemModel.swift in Sources */,
 				B233CF67236C3DD40079FC35 /* FFMainViewController.swift in Sources */,
+				B2D92223259B33F700DF4A9A /* FFReversePageViewController.swift in Sources */,
 				B233CF5F236C1F920079FC35 /* BaseViewController.swift in Sources */,
 				B227E783258A1B2500C758A2 /* FFReadCell.swift in Sources */,
 				B227E77925889CE300C758A2 /* String+core.swift in Sources */,
@@ -391,14 +401,16 @@
 				B207EE58255250AC005D4EF8 /* FFReadInfo.swift in Sources */,
 				B207EE6525555150005D4EF8 /* FFTurnPageViewController.swift in Sources */,
 				B23FD2192368228100BE5AC9 /* AppDelegate.swift in Sources */,
+				B2D9221E259B195A00DF4A9A /* FFReadModel.swift in Sources */,
 				B22E432D23697D2500FB1835 /* String+Common.swift in Sources */,
 				B23F59F72510BEA500639408 /* FFTurnPageView.swift in Sources */,
 				B227E77E258A0AE600C758A2 /* FFReadConfig.swift in Sources */,
 				B22E43252369393700FB1835 /* FFBarView.swift in Sources */,
 				B233CF61236C25700079FC35 /* UIViewController+Navigation.swift in Sources */,
 				B21E427A2570D914008D5249 /* FFTextStyle.swift in Sources */,
-				B207EE6A25555823005D4EF8 /* FFReadViewController.swift in Sources */,
+				B207EE6A25555823005D4EF8 /* FFReadViewPageController.swift in Sources */,
 				B2BC69BB236FBA2A00C416C2 /* UIButton+Common.swift in Sources */,
+				B2D921D42595F7A300DF4A9A /* FFReadViewController.swift in Sources */,
 				B21E4265256E573B008D5249 /* FFCoreTextParser.swift in Sources */,
 				B233CF63236C268A0079FC35 /* FFNavigationBar.swift in Sources */,
 				B23D7228251DE7E500DE6966 /* FFReadChapterModel.swift in Sources */,

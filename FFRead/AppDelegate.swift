@@ -127,8 +127,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIAlertViewDelegate {
     
     func openLocalRelevant(path: String){
         FFtextChapterParser.parser(path: path) { (readChapterList) in
-            let vc = FFTurnPageViewController()
+            let array = path.components(separatedBy: "/")
+            var name :String
+            if array.count > 0 {
+                name = array.last ?? ""
+                name = name.components(separatedBy: ".").first ?? ""
+            } else {
+                name = ""
+            }
+            let vc = FFReadViewController()
             vc.readChapterList = readChapterList
+            vc.bookName = name
             rootNav.pushViewController(vc, animated: true)
         }
     }

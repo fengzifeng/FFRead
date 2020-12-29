@@ -22,10 +22,10 @@ extension RootNavigationController : UINavigationControllerDelegate, UIGestureRe
             return false
         }
         
-//        let topVC : BaseViewController = self.topViewController as! BaseViewController
-//        if topVC.responds(to: #selector(topVC.enableScreenEdgePanGesture)) {
-//            return topVC.enableScreenEdgePanGesture()
-//        }
+        let topVC : BaseViewController = self.topViewController as! BaseViewController
+        if topVC.responds(to: #selector(topVC.enableScreenEdgePanGesture)) {
+            return topVC.enableScreenEdgePanGesture()
+        }
         return true
     }
 }

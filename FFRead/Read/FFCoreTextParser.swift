@@ -18,23 +18,35 @@ class FFCoreTextParser: NSObject {
         readmodel.bookId = chapterModel.bookId
         readmodel.bookName = chapterModel.bookName
         let rect = CGRect.init(x: 0, y: 0, width: FFReadConfig.share.textSize.width, height: FFReadConfig.share.textSize.height)
-        let rangs = content.pageWithTextRect(textRect: rect, style: textStyle)
+        var resContent :String = ""
+        
+        if chapterModel.name.count > 0 {
+            resContent = chapterModel.name.appending(content)
+        }
+        let rangs = resContent.pageWithTextRect(textRect: rect, style: textStyle, nameRange: NSRange.init(location: 0, length: chapterModel.name.count))
         
         for i in 0..<rangs.count {
             let pageModel = FFReadPageModel()
             pageModel.range = rangs[i]
-            pageModel.content = content
+            pageModel.content = resContent
             pageModel.pageIndex = i
             pageModel.chapterIndex = 0
             pageModel.width = FFReadConfig.share.textSize.width
-            let pageStr = (content as NSString).substring(with: pageModel.range!)
-            let height = pageStr.getPageHeight(width: pageModel.width, style: textStyle)
-            pageModel.height = height
-            let attrString = NSMutableAttributedString.init(string: (content as NSString).substring(with: pageModel.range))
-            textStyle.addStyle(attrString: attrString, range: NSRange.init(location: 0, length: pageModel.range.length))
+            let pageStr = (resContent as NSString).substring(with: pageModel.range!)
+            
+            let attrString = NSMutableAttributedString.init(string: (resContent as NSString).substring(with: pageModel.range))
+            if i == 0 {
+                textStyle.addStyle(attrString: attrString, range: NSRange.init(location: 0, length: pageModel.range.length), nameRange: NSRange.init(location: 0, length: chapterModel.name.count))
+                let height = pageStr.getPageHeight(width: pageModel.width, style: textStyle, nameRange: NSRange.init(location: 0, length: chapterModel.name.count))
+                pageModel.height = height
+            } else {
+                textStyle.addStyle(attrString: attrString, range: NSRange.init(location: 0, length: pageModel.range.length), nameRange: nil)
+                let height = pageStr.getPageHeight(width: pageModel.width, style: textStyle, nameRange: nil)
+                pageModel.height = height
+            }
             
             let framesetter = CTFramesetterCreateWithAttributedString(attrString)
-            let rect = CGRect.init(x: 0, y: 0, width: pageModel.width, height: height)
+            let rect = CGRect.init(x: 0, y: 0, width: pageModel.width, height: pageModel.height)
             let path = CGPath(rect: rect, transform: nil)
             let frameRef = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, pageModel.range.length), path, nil)
             pageModel.frame = frameRef

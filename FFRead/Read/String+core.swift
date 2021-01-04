@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 extension String {
-    func pageWithTextRect(textRect:CGRect, style:FFTextStyle) -> [NSRange] {
+    func pageWithTextRect(textRect:CGRect, style:FFTextStyle, nameRange:NSRange?) -> [NSRange] {
         
         let string = NSMutableAttributedString.init(string: self)
-        style.addStyle(attrString: string, range: NSMakeRange(0, self.count))
+        style.addStyle(attrString: string, range: NSMakeRange(0, self.count), nameRange: nameRange)
         
         
         let framesetterRef = CTFramesetterCreateWithAttributedString(string)
@@ -35,9 +35,9 @@ extension String {
         return rangs
     }
     
-    func getPageHeight(width:CGFloat, style:FFTextStyle) -> CGFloat {
+    func getPageHeight(width:CGFloat, style:FFTextStyle, nameRange:NSRange?) -> CGFloat {
         let attrString = NSMutableAttributedString.init(string: self)
-        style.addStyle(attrString: attrString, range: NSMakeRange(0, attrString.length))
+        style.addStyle(attrString: attrString, range: NSMakeRange(0, attrString.length), nameRange: nameRange)
         let framesetter = CTFramesetterCreateWithAttributedString(attrString)
         let size = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, 0), nil, CGSize.init(width: width, height: CGFloat.greatestFiniteMagnitude), nil)
         

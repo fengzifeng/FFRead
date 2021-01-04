@@ -9,11 +9,11 @@
 import UIKit
 
 class FFTextStyle: NSObject,NSCoding {
-    var font: UIFont = UIFont.systemFont(ofSize: 12)
+    var font: UIFont = UIFont.systemFont(ofSize: 16)
     var textColor: UIColor = UIColor.black
-    var titlefont: UIFont = UIFont.systemFont(ofSize: 18)
-    var lineSpacing: Float = 5
-    var paragraphSpacing: Float = 10
+    var titlefont: UIFont = UIFont.systemFont(ofSize: 20)
+    var lineSpacing: CGFloat = 5
+    var paragraphSpacing: CGFloat = 8
     var textAlignment = CTTextAlignment.left
     
     required init?(coder: NSCoder) {
@@ -21,8 +21,8 @@ class FFTextStyle: NSObject,NSCoding {
         font = coder.decodeObject(forKey: "font") as! UIFont
         textColor = coder.decodeObject(forKey: "textColor") as! UIColor
         titlefont = coder.decodeObject(forKey: "titlefont") as! UIFont
-        lineSpacing = coder.decodeFloat(forKey: "lineSpacing")
-        paragraphSpacing = coder.decodeFloat(forKey: "paragraphSpacing")
+        lineSpacing = CGFloat(coder.decodeFloat(forKey: "lineSpacing"))
+        paragraphSpacing = CGFloat(coder.decodeFloat(forKey: "paragraphSpacing"))
 
     }
     
@@ -34,17 +34,18 @@ class FFTextStyle: NSObject,NSCoding {
         coder.encode(paragraphSpacing, forKey: "paragraphSpacing")
     }
     
-    func addStyle(attrString:NSMutableAttributedString, range:NSRange) -> Void {
+    func addStyle(attrString:NSMutableAttributedString, range:NSRange, nameRange:NSRange?) -> Void {
         attrString.addAttribute(NSAttributedString.Key.font, value: self.font, range: range)
-        
-        let titleRange = (attrString.string as NSString).range(of:"\n")
-        attrString.addAttribute(NSAttributedString.Key.font, value: self.titlefont, range: titleRange)
-        
-        
-        let settings = [CTParagraphStyleSetting(spec: .alignment, valueSize: Int(self.textAlignment.rawValue), value:&textAlignment),CTParagraphStyleSetting(spec: .paragraphSpacing, valueSize: Int(self.paragraphSpacing), value: &paragraphSpacing),CTParagraphStyleSetting(spec: .maximumLineSpacing, valueSize: Int(self.lineSpacing), value: &lineSpacing)]
 
-        let paragraphStyle = CTParagraphStyleCreate(settings, 3)
-        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: range)
+        if (nameRange != nil) {
+            attrString.addAttribute(NSAttributedString.Key.font, value: self.titlefont, range: nameRange!)
+        }
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = lineSpacing
+        style.paragraphSpacing = paragraphSpacing
+        style.alignment = NSTextAlignment.left
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: range)
         attrString.addAttribute(NSAttributedString.Key.foregroundColor, value: self.textColor, range: range)
     }
     

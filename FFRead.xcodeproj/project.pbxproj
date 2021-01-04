@@ -30,7 +30,6 @@
 		B23D7224251C9B8300DE6966 /* FFtextChapterParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */; };
 		B23D7226251CA20E00DE6966 /* FFReadItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7225251CA20E00DE6966 /* FFReadItemModel.swift */; };
 		B23D7228251DE7E500DE6966 /* FFReadChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */; };
-		B23F59F72510BEA500639408 /* FFTurnPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59F62510BEA500639408 /* FFTurnPageView.swift */; };
 		B23F59FD25120E3300639408 /* FFReadPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F59FC25120E3300639408 /* FFReadPageModel.swift */; };
 		B23FD2192368228100BE5AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FD2182368228100BE5AC9 /* AppDelegate.swift */; };
 		B23FD21B2368228100BE5AC9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23FD21A2368228100BE5AC9 /* RootViewController.swift */; };
@@ -90,7 +89,6 @@
 		B23D7223251C9B8300DE6966 /* FFtextChapterParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFtextChapterParser.swift; sourceTree = "<group>"; };
 		B23D7225251CA20E00DE6966 /* FFReadItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadItemModel.swift; sourceTree = "<group>"; };
 		B23D7227251DE7E500DE6966 /* FFReadChapterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadChapterModel.swift; sourceTree = "<group>"; };
-		B23F59F62510BEA500639408 /* FFTurnPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTurnPageView.swift; sourceTree = "<group>"; };
 		B23F59FC25120E3300639408 /* FFReadPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadPageModel.swift; sourceTree = "<group>"; };
 		B23FD2152368228100BE5AC9 /* FFRead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFRead.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23FD2182368228100BE5AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 		B23F59F52510BE5300639408 /* Read */ = {
 			isa = PBXGroup;
 			children = (
-				B23F59F62510BEA500639408 /* FFTurnPageView.swift */,
 				B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */,
 				B2D921D32595F7A300DF4A9A /* FFReadViewController.swift */,
 				B207EE6925555823005D4EF8 /* FFReadViewPageController.swift */,
@@ -403,7 +400,6 @@
 				B23FD2192368228100BE5AC9 /* AppDelegate.swift in Sources */,
 				B2D9221E259B195A00DF4A9A /* FFReadModel.swift in Sources */,
 				B22E432D23697D2500FB1835 /* String+Common.swift in Sources */,
-				B23F59F72510BEA500639408 /* FFTurnPageView.swift in Sources */,
 				B227E77E258A0AE600C758A2 /* FFReadConfig.swift in Sources */,
 				B22E43252369393700FB1835 /* FFBarView.swift in Sources */,
 				B233CF61236C25700079FC35 /* UIViewController+Navigation.swift in Sources */,

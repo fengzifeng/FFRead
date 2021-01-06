@@ -12,7 +12,7 @@ import UIKit
 class FFReadConfig: NSObject {
     static let share = FFReadConfig()
     
-    let textSize: CGSize = CGSize.init(width: ScreenWidth - 40, height: ScreenHeigth - StateBarH - TabDiff)
+    let textSize: CGSize = CGSize.init(width: ScreenWidth - 40, height: ScreenHeigth - StateBarH - TabDiff - 30)
     
     
     override init() {

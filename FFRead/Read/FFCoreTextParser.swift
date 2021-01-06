@@ -20,9 +20,14 @@ class FFCoreTextParser: NSObject {
         let rect = CGRect.init(x: 0, y: 0, width: FFReadConfig.share.textSize.width, height: FFReadConfig.share.textSize.height)
         var resContent :String = ""
         
+        resContent = content.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+        resContent = "　　" + resContent
         if chapterModel.name.count > 0 {
-            resContent = chapterModel.name.appending(content)
+            resContent = chapterModel.name + "\n" + resContent
         }
+        var placeHolder: unichar = 0xFFFC
+        let placeHolderStr: NSString = NSString.init(characters: &placeHolder, length: 1)
+        resContent.append(placeHolderStr as String)
         let rangs = resContent.pageWithTextRect(textRect: rect, style: textStyle, nameRange: NSRange.init(location: 0, length: chapterModel.name.count))
         
         for i in 0..<rangs.count {

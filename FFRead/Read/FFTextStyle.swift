@@ -14,7 +14,7 @@ class FFTextStyle: NSObject,NSCoding {
     var titlefont: UIFont = UIFont.systemFont(ofSize: 20)
     var lineSpacing: CGFloat = 5
     var paragraphSpacing: CGFloat = 8
-    var textAlignment = CTTextAlignment.left
+    var textAlignment = NSTextAlignment.justified
     
     required init?(coder: NSCoder) {
         super.init()
@@ -44,9 +44,10 @@ class FFTextStyle: NSObject,NSCoding {
         let style = NSMutableParagraphStyle()
         style.lineSpacing = lineSpacing
         style.paragraphSpacing = paragraphSpacing
-        style.alignment = NSTextAlignment.left
+        style.alignment = textAlignment
         attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value: style, range: range)
         attrString.addAttribute(NSAttributedString.Key.foregroundColor, value: self.textColor, range: range)
+
     }
     
     

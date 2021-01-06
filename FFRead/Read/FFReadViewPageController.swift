@@ -20,11 +20,20 @@ class FFReadViewPageController: UIViewController {
             readView.pageModel = pageModel
             readView.frame = CGRect.init(x: 20, y: StateBarH, width: ScreenWidth - 40, height: pageModel.height)
             readView.setNeedsDisplay()
+            numberLabel.text = NSNumber.init(value: (_readModel.currentPage + 1)).stringValue.appending("/").appending(NSNumber.init(value: _readModel.readItemModel.pageModels.count).stringValue)
         }
         get {
             return _readModel
         }
     }
+    
+    lazy var numberLabel : UILabel = {
+        let numberLabel = UILabel.init(frame: CGRect.init(x: ScreenWidth - 100 - 20, y: ScreenHeigth - 20 - TabDiff, width: 100, height: 20))
+        numberLabel.textColor = UIColor.black
+        numberLabel.font = UIFont.systemFont(ofSize: 13)
+        numberLabel.textAlignment = NSTextAlignment.right
+        return numberLabel
+    }()
 //    var chapterIndex: Int!
 //    var cacheIndex: Int!
 //
@@ -46,6 +55,7 @@ class FFReadViewPageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
+        view.addSubview(numberLabel)
     }
     
     func setupViews() {

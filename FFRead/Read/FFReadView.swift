@@ -12,7 +12,7 @@ import UIKit
 class FFReadView: UIView {
     
     var pageModel: FFReadPageModel!
-    
+        
     
     override init(frame: CGRect) {
         

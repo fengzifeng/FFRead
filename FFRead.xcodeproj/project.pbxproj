@@ -66,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F8B1C822AF7918D0025A26F /* read_s1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = read_s1.mp4; sourceTree = "<group>"; };
 		B207EE57255250AC005D4EF8 /* FFReadInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadInfo.swift; sourceTree = "<group>"; };
 		B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTurnPageViewController.swift; sourceTree = "<group>"; };
 		B207EE6925555823005D4EF8 /* FFReadViewPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadViewPageController.swift; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 			children = (
 				B23FD2182368228100BE5AC9 /* AppDelegate.swift */,
 				B2D921CB2595F3C300DF4A9A /* 大道朝天.txt */,
+				9F8B1C822AF7918D0025A26F /* read_s1.mp4 */,
 				B2BC69BD236FCB0200C416C2 /* Root */,
 				B23F59F52510BE5300639408 /* Read */,
 				B2BC69BC236FCAAB00C416C2 /* Extension */,

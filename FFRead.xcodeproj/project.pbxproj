@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F896FB72AF874C200A2D2B3 /* read_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F896FB22AF874C100A2D2B3 /* read_3.png */; };
+		9F896FB82AF874C200A2D2B3 /* read_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F896FB32AF874C100A2D2B3 /* read_1.png */; };
+		9F896FB92AF874C200A2D2B3 /* read_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F896FB42AF874C100A2D2B3 /* read_2.png */; };
+		9F896FBA2AF874C200A2D2B3 /* read_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F896FB52AF874C100A2D2B3 /* read_4.png */; };
+		9F896FBB2AF874C200A2D2B3 /* read_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F896FB62AF874C100A2D2B3 /* read_5.png */; };
 		B207EE58255250AC005D4EF8 /* FFReadInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE57255250AC005D4EF8 /* FFReadInfo.swift */; };
 		B207EE6525555150005D4EF8 /* FFTurnPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */; };
 		B207EE6A25555823005D4EF8 /* FFReadViewPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B207EE6925555823005D4EF8 /* FFReadViewPageController.swift */; };
@@ -66,7 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F896FB12AF7C27600A2D2B3 /* read_s1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = read_s1.mp4; sourceTree = "<group>"; };
+		9F896FB22AF874C100A2D2B3 /* read_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_3.png; sourceTree = "<group>"; };
+		9F896FB32AF874C100A2D2B3 /* read_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_1.png; sourceTree = "<group>"; };
+		9F896FB42AF874C100A2D2B3 /* read_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_2.png; sourceTree = "<group>"; };
+		9F896FB52AF874C100A2D2B3 /* read_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_4.png; sourceTree = "<group>"; };
+		9F896FB62AF874C100A2D2B3 /* read_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = read_5.png; sourceTree = "<group>"; };
 		B207EE57255250AC005D4EF8 /* FFReadInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadInfo.swift; sourceTree = "<group>"; };
 		B207EE642555514F005D4EF8 /* FFTurnPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTurnPageViewController.swift; sourceTree = "<group>"; };
 		B207EE6925555823005D4EF8 /* FFReadViewPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFReadViewPageController.swift; sourceTree = "<group>"; };
@@ -185,9 +194,13 @@
 		B23FD2172368228100BE5AC9 /* FFRead */ = {
 			isa = PBXGroup;
 			children = (
+				9F896FB32AF874C100A2D2B3 /* read_1.png */,
+				9F896FB42AF874C100A2D2B3 /* read_2.png */,
+				9F896FB22AF874C100A2D2B3 /* read_3.png */,
+				9F896FB52AF874C100A2D2B3 /* read_4.png */,
+				9F896FB62AF874C100A2D2B3 /* read_5.png */,
 				B23FD2182368228100BE5AC9 /* AppDelegate.swift */,
 				B2D921CB2595F3C300DF4A9A /* 大道朝天.txt */,
-				9F896FB12AF7C27600A2D2B3 /* read_s1.mp4 */,
 				B2BC69BD236FCB0200C416C2 /* Root */,
 				B23F59F52510BE5300639408 /* Read */,
 				B2BC69BC236FCAAB00C416C2 /* Extension */,
@@ -351,8 +364,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F896FB92AF874C200A2D2B3 /* read_2.png in Resources */,
+				9F896FB72AF874C200A2D2B3 /* read_3.png in Resources */,
+				9F896FBB2AF874C200A2D2B3 /* read_5.png in Resources */,
 				B23FD2232368228600BE5AC9 /* LaunchScreen.storyboard in Resources */,
 				B23FD2202368228600BE5AC9 /* Assets.xcassets in Resources */,
+				9F896FBA2AF874C200A2D2B3 /* read_4.png in Resources */,
+				9F896FB82AF874C200A2D2B3 /* read_1.png in Resources */,
 				B2D921CC2595F3C300DF4A9A /* 大道朝天.txt in Resources */,
 				B23FD21E2368228100BE5AC9 /* Main.storyboard in Resources */,
 			);
